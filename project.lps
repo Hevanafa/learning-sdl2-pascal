@@ -8,21 +8,23 @@
       <Unit>
         <Filename Value="project.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <CursorPos X="26" Y="2"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="19"/>
+        <CursorPos X="38" Y="80"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="main_unit.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="37" Y="16"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="49"/>
+        <CursorPos X="16" Y="53"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="6">
+    <JumpHistory HistoryIndex="24">
       <Position>
         <Filename Value="project.lpr"/>
         <Caret Line="49" Column="10" TopLine="27"/>
@@ -50,6 +52,78 @@
       <Position>
         <Filename Value="main_unit.pas"/>
         <Caret Line="47" Column="12" TopLine="21"/>
+      </Position>
+      <Position>
+        <Filename Value="project.lpr"/>
+        <Caret Line="2" Column="26" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="46" Column="31" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="78" Column="34" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="52" Column="10" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="68" Column="31" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="76" Column="29" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="22" Column="16" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="58" Column="5" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="project.lpr"/>
+        <Caret Line="80" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="53" Column="22" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="36" Column="37" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="60" Column="5" TopLine="44"/>
+      </Position>
+      <Position>
+        <Filename Value="project.lpr"/>
+        <Caret Line="80" TopLine="55"/>
+      </Position>
+      <Position>
+        <Filename Value="project.lpr"/>
+        <Caret Line="31" Column="3" TopLine="18"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="23" Column="7" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="57" Column="15" TopLine="47"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="62" Column="9" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="63" Column="18" TopLine="49"/>
       </Position>
     </JumpHistory>
     <RunParams>

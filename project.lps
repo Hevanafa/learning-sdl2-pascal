@@ -17,18 +17,17 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="73"/>
-        <CursorPos X="30" Y="77"/>
+        <TopLine Value="124"/>
+        <CursorPos X="42" Y="147"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\SDL2-for-Pascal-2.2-stable\units\sdlsurface.inc"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="35"/>
         <CursorPos X="5" Y="36"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="..\SDL2-for-Pascal-2.2-stable\units\sdlrect.inc"/>
@@ -39,14 +38,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="main_unit.pas"/>
-        <Caret Line="58" Column="5" TopLine="44"/>
-      </Position>
-      <Position>
-        <Filename Value="project.lpr"/>
-        <Caret Line="80" TopLine="55"/>
-      </Position>
       <Position>
         <Filename Value="main_unit.pas"/>
         <Caret Line="53" Column="22" TopLine="40"/>
@@ -158,6 +149,14 @@
       <Position>
         <Filename Value="main_unit.pas"/>
         <Caret Line="140" Column="10" TopLine="122"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="22" Column="7" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="23" Column="18" TopLine="10"/>
       </Position>
     </JumpHistory>
     <RunParams>

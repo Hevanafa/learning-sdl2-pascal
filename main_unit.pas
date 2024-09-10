@@ -25,6 +25,8 @@ type
 
       font: PTTF_Font;
       textRect: TSDL_Rect;
+      textSurface: PSDL_Surface;
+      textTexture: PSDL_Texture;
       fg, bg: TSDL_Color;
 
       last_t: TDateTime;
@@ -90,8 +92,8 @@ begin
   ttf_closefont(font);
   ttf_quit;
 
-  sdl_freesurface(sdlsurface);
-  sdl_destroytexture(sdltexture);
+  sdl_freesurface(textSurface);
+  sdl_destroytexture(textTexture);
 
   SDL_DestroyRenderer(sdlRenderer);
   SDL_DestroyWindow(sdlWindow);
@@ -133,13 +135,16 @@ begin
   SDL_SetRenderDrawColor(sdlRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
   SDL_RenderDrawRect(sdlRenderer, @sdlRect);
 
-  sdlSurface := TTF_RenderText(font, 'Hello from TGameClass!', fg, bg);
-  sdlTexture := SDL_CreateTextureFromSurface(sdlRenderer, sdlSurface);
+  // render text
+  textSurface := TTF_RenderText(font, 'Hello from TGameClass!', fg, bg);
+  textTexture := SDL_CreateTextureFromSurface(sdlRenderer, textSurface);
 
-  textRect.w := sdlSurface^.w;
-  textRect.h := sdlSurface^.h;
+  // get the correct surface size
+  // https://stackoverflow.com/questions/22886500/
+  textRect.w := textSurface^.w;
+  textRect.h := textSurface^.h;
 
-  sdl_rendercopy(sdlrenderer, sdltexture, nil, @textRect);
+  sdl_rendercopy(sdlRenderer, textTexture, nil, @textRect);
 
   SDL_RenderPresent(sdlRenderer);
 end;

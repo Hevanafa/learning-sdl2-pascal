@@ -8,23 +8,23 @@
       <Unit>
         <Filename Value="project.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="19"/>
-        <CursorPos X="38" Y="80"/>
-        <UsageCount Value="21"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="55"/>
+        <CursorPos X="9" Y="56"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="main_unit.pas"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="49"/>
-        <CursorPos X="16" Y="53"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="82"/>
+        <CursorPos X="16" Y="97"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="24">
+    <JumpHistory HistoryIndex="26">
       <Position>
         <Filename Value="project.lpr"/>
         <Caret Line="49" Column="10" TopLine="27"/>
@@ -124,6 +124,14 @@
       <Position>
         <Filename Value="main_unit.pas"/>
         <Caret Line="63" Column="18" TopLine="49"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="89" Column="29" TopLine="82"/>
+      </Position>
+      <Position>
+        <Filename Value="main_unit.pas"/>
+        <Caret Line="97" Column="16" TopLine="82"/>
       </Position>
     </JumpHistory>
     <RunParams>

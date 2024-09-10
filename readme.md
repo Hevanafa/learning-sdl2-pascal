@@ -7,3 +7,5 @@ I'm using Lazarus IDE v3.4 because it's easier to setup.
 ![Preview](./preview.png)
 
 This project uses a separate unit file (it's an equivalent of a namespace file in C#) for the game class declaration.
+
+![Second Preview](./second_preview.png)

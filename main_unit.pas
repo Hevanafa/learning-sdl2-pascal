@@ -9,7 +9,8 @@ unit main_unit;
 interface
 
 uses
-  Classes, SysUtils, SDL2, DateUtils;
+  Classes, SysUtils, DateUtils,
+  SDL2, SDL2_ttf;
 
 type
   TGameClass = Class(TObject)
@@ -21,6 +22,10 @@ type
       sdlSurface: PSDL_Surface;
       sdlTexture: PSDL_Texture;
       sdlRect: TSDL_Rect;
+
+      font: PTTF_Font;
+      textRect: TSDL_Rect;
+      fg, bg: TSDL_Color;
 
       last_t: TDateTime;
       dt: real;  // single or float
@@ -51,6 +56,13 @@ begin
   // if SDL_CreateWindowAndRenderer(320, 240, SDL_WINDOW_SHOWN, @sdlWindow, @sdlRenderer) <> 0 then
   //   Halt;
 
+  // Init font
+  if TTF_Init < 0 then Halt;
+  font := TTF_OpenFont('C:\windows\fonts\arial.ttf', 20);
+
+  fg.r := 255; fg.g := 255; fg.b := 255;
+
+
   sdlKeyboardState := SDL_GetKeyboardState(nil);
 
   last_t := now;
@@ -75,6 +87,12 @@ begin
   end;
 
   // clear memory
+  ttf_closefont(font);
+  ttf_quit;
+
+  sdl_freesurface(sdlsurface);
+  sdl_destroytexture(sdltexture);
+
   SDL_DestroyRenderer(sdlRenderer);
   SDL_DestroyWindow(sdlWindow);
 
@@ -114,6 +132,14 @@ begin
   // draw the little black square
   SDL_SetRenderDrawColor(sdlRenderer, 0, 0, 0, SDL_ALPHA_OPAQUE);
   SDL_RenderDrawRect(sdlRenderer, @sdlRect);
+
+  sdlSurface := TTF_RenderText(font, 'Hello from TGameClass!', fg, bg);
+  sdlTexture := SDL_CreateTextureFromSurface(sdlRenderer, sdlSurface);
+
+  textRect.w := sdlSurface^.w;
+  textRect.h := sdlSurface^.h;
+
+  sdl_rendercopy(sdlrenderer, sdltexture, nil, @textRect);
 
   SDL_RenderPresent(sdlRenderer);
 end;

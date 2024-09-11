@@ -17,6 +17,8 @@ type
     private
       done: boolean;
 
+      sdlEvent: PSDL_Event;
+
       sdlKeyboardState: PUInt8;
       sdlWindow: PSDL_Window;
       sdlRenderer: PSDL_Renderer;
@@ -46,7 +48,7 @@ type
 
 
     public
-      constructor new();
+      constructor create();
       procedure set_fg(r: uint8; g: uint8; b: uint8; a: uint8 = SDL_ALPHA_OPAQUE);
       procedure draw_str(text: string; x: integer = 0; y: integer = 0);
       procedure init_sdl();
@@ -59,7 +61,7 @@ type
 
 implementation
 
-constructor TGameClass.new();
+constructor TGameClass.create();
 begin
   load_story;
 
@@ -154,14 +156,41 @@ begin
   sdlRect.y := 50;
   sdlRect.w := 10;
   sdlRect.h := 10;
+
+  new(sdlEvent);
 end;
 
 procedure TGameClass.update();
 begin
-  SDL_PumpEvents;
+  // SDL_PumpEvents;
+
+  // https://stackoverflow.com/questions/56435371/
+  while SDL_PollEvent(sdlEvent) = 1 do begin
+    case sdlevent^.type_ of
+      SDL_KEYDOWN: begin
+        case sdlevent^.key.keysym.sym of
+          SDLK_ESCAPE: done := true;
+
+          SDLK_UP, SDLK_W: sdlRect.y -= 4;
+          SDLK_DOWN, SDLK_S: sdlRect.y += 4;
+
+          SDLK_LEFT, SDLK_A: sdlRect.x -= 4;
+          SDLK_RIGHT, SDLK_D: sdlRect.x += 4;
+        end;
+      end;
+
+      SDL_WINDOWEVENT: begin
+        case sdlevent^.window.event of
+          // https://stackoverflow.com/questions/49686915/
+          SDL_WINDOWEVENT_CLOSE: done := true;
+        end;
+      end;
+    end;
+  end;
 
   angle += 0.1;
 
+  {
   if sdlKeyboardState[SDL_SCANCODE_ESCAPE] = 1 then
     done := true;
 
@@ -174,6 +203,7 @@ begin
     sdlRect.x -= 1;
   if sdlKeyboardState[SDL_SCANCODE_D] = 1 then
     sdlRect.x += 1;
+  }
 end;
 
 
@@ -236,10 +266,12 @@ begin
   for a := 0 to High(story) do
     draw_str(story[a], 0, 20 * a);
 
-  i := random(100);
-  draw_str(format('i = %d', [i]), 0, 80);
-
+  // string concatenation
   draw_str(format('FPS: %d', [last_fps]), SCREEN_WIDTH - 100, 0);
+
+  // 2nd string concatenation example
+  i := random(100);
+  draw_str('i = ' + IntToStr(i), 0, 80);
 
   set_fg(255, 255, 0);
   draw_str('WASD - Move', 0, SCREEN_HEIGHT - 40);

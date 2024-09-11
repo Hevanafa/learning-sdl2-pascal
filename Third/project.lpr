@@ -45,8 +45,8 @@ begin
     Exit;
   end;
 
-  { add your program here }
-  game := TGameClass.new;
+  // add your program here
+  game := TGameClass.create;
 
   // stop program loop
   Terminate;

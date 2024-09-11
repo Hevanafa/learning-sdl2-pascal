@@ -209,6 +209,7 @@ end;
 procedure TGameClass.draw();
 var
   a: integer;
+  i: integer; // for the random number example
 begin
   // clear screen
   SDL_SetRenderDrawColor(sdlRenderer, 100, 149, 237, SDL_ALPHA_OPAQUE);
@@ -234,6 +235,9 @@ begin
   // https://stackoverflow.com/questions/30334814/
   for a := 0 to High(story) do
     draw_str(story[a], 0, 20 * a);
+
+  i := random(100);
+  draw_str(format('i = %d', [i]), 0, 80);
 
   draw_str(format('FPS: %d', [last_fps]), SCREEN_WIDTH - 100, 0);
 

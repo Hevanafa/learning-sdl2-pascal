@@ -9,7 +9,7 @@
         <Filename Value="project.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos X="20" Y="79"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -17,9 +17,9 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="69"/>
-        <CursorPos X="17" Y="90"/>
-        <UsageCount Value="27"/>
+        <TopLine Value="218"/>
+        <CursorPos X="39" Y="240"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -27,28 +27,28 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="35"/>
         <CursorPos X="5" Y="36"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\SDL2-for-Pascal-2.2-stable\units\sdlrect.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="5" Y="50"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\SDL2-for-Pascal-2.2-stable\units\sdlpixels.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="471"/>
         <CursorPos X="5" Y="484"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="..\SDL2-for-Pascal-2.2-stable\units\sdlrenderer.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="80"/>
         <CursorPos X="3" Y="102"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
